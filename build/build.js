@@ -121,7 +121,7 @@ exports.build = function (compsBase32, buildName) {
 	    newSrc = copy + intro + combineFiles(files) + outro,
 
 	    pathPart = 'dist/leaflet.ksp' + (buildName ? '-' + buildName : ''),
-	    srcPath = pathPart + '.src.js',
+	    srcPath = pathPart + '-src.js',
 
 	    oldSrc = loadSilently(srcPath),
 	    srcDelta = getSizeDelta(newSrc, oldSrc);
