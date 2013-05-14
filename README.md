@@ -40,7 +40,8 @@ Leaflet build system is powered by the [Node.js](http://nodejs.org/) platform an
 Developers
 ----------
 
-* Author: Joel Pedraza&nbsp;&nbsp;&nbsp;[Google+](http://plus.google.com/111289811888358912498/)&nbsp;&nbsp;&nbsp;[Kerbal Forums](http://forum.kerbalspaceprogram.com/member.php/58916)
+* Author: Joel Pedraza &nbsp; *saik0* &nbsp; [Google+](http://plus.google.com/111289811888358912498/) &nbsp; [Kerbal Forums](http://forum.kerbalspaceprogram.com/member.php/58916)
+* Contributor: *Trigger Au* &nbsp; [Kerbal Forums] (http://forum.kerbalspaceprogram.com/member.php/59550)
 
 License
 -------
