@@ -10,63 +10,54 @@ var deps = {
 	},
 
 	TileLayer: {
-		src: [
-			'layer/tile/TileLayer.js'
-		],
+		src: [ 'layer/tile/TileLayer.js' ],
 		desc: 'Displays tile layers on the map, must be of a specified type.'
 	},
 
 	LayerGroup: {
-		src: [
-			'layer/LayerGroup.js'
-		],
+		src: [ 'layer/LayerGroup.js' ],
 		desc: 'Allows grouping several layers to handle them as one, must be of a specified type.'
 	},
 
 	Marker: {
-		src: [
-			'layer/marker/Icon.js'
-		],
+		src: [ 'layer/marker/Icon.js' ],
 		desc: 'Markers to put on the map. Includes some predefined plugin specific icons.'
 	},
 
 	Legend: {
 		src: [ 'model/Legend.js' ],
-		desc: 'A very simple data model for the legend control, and predifined legends'
+		desc: 'A very simple data model for the legend control, and predifined legends.'
 	},
 
 	Control: {
 		src: [ 'control/Control.js' ],
-		desc: 'A contol to change which CelestialBody is displayed on a map'
+		desc: 'A contol to change which CelestialBody is displayed on a map.'
 	},
 
 	ControlLegend: {
-		src: [
-			'control/Control.Legend.js'
-		],
+		src: [ 'control/Control.Legend.js' ],
 		desc: 'Displays a simple legend on the map',
 		deps: ['Legend']
 	},
 
 	ControlScale: {
-		src: [
-			'control/Control.Scale.js'
-		],
-		desc: 'A scale control that '
+		src: [ 'control/Control.Scale.js' ],
+		desc: 'A scale control that uses the radius of the CelestialBody.'
 	},
 	
 	ControlCelestialBody: {
-		src: [
-			'control/Control.CelestialBody.js'
-		],
-		desc: 'A control to switch between celestial bodies'
+		src: [ 'control/Control.CelestialBody.js' ],
+		desc: 'A control that changes which CelestialBody is displayed.'
+	},
+
+	ControlLayers: {
+		src: [ 'control/Control.Layers.js' ],
+		desc: 'A layer contol that updates when the CelestialBody is changed.'
 	},
 	
 	CelestialBodyDefinitions: {
-		src: [
-			'body/CelestialBody.Definitions.js'
-		],
-		desc: 'Definitions of all the celestial bodies in Kerbal Space program, tile and marker layers to display them, and a model of their relationships',
+		src: [ 'body/CelestialBody.Definitions.js' ],
+		desc: 'Definitions of all the celestial bodies in Kerbal Space program, tile and marker layers to display them, and a model of their relationships.',
 		deps: ['TileLayer', 'LayerGroup', 'Legend']
 	}
 };
