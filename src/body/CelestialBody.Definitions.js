@@ -1,5 +1,7 @@
 /*
  * Body definitions
+ *
+ * SPOILER ALERT: These body definitions contain spoilers
  */
 
 L.KSP.CelestialBody.MOHO = L.KSP.celestialBody({
@@ -180,14 +182,89 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 	id: "duna",
 	name: "Duna",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-duna.png"
+	radius: 320000,
+	addedOn: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	lastUpdated: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	thumbnail: "http://static.kerbalmaps.com/images/body-duna.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "sat",
+			body: "duna"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "color",
+			body: "duna",
+			legend: {
+				"4800 m" : "#C3A082",
+				"4000 m" : "#966446",
+				"3000 m" : "#733219",
+				"2000 m" : "#501E14",
+				"1000 m" : "#3C140F",
+				"0 m" : "#280F0A"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "slope",
+			body: "duna",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {
+		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
+			L.marker([17.0483, -85.4717], {icon: L.KSP.Icon.ANOMALY}).bindPopup("17.0483 : -85.4717"), //face
+			L.marker([-30.3525, -28.6828], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-30.3525 : -28.6828"), //msl camera
+			L.marker([-66.1344, -160.7432], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-66.1344 : -160.7432") //pyramid sstv
+			// though it's defined in game data there does not appear to be anything here
+			// L.marker([-0.0005, -31.8825], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-0.0005 : -31.8825") //pyramid
+		])
+	}
 });
 
 L.KSP.CelestialBody.IKE = L.KSP.celestialBody({
 	id: "ike",
 	name: "Ike",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-ike.png"
+	radius: 130000,
+	addedOn: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	lastUpdated: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	thumbnail: "http://static.kerbalmaps.com/images/body-ike.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "sat",
+			body: "ike"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "color",
+			body: "ike",
+			legend: {
+				"13000 m" : "#828282",
+				"11000 m" : "#6E6E6E",
+				"9000 m" : "#5A5A5A",
+				"7000 m" : "#464646",
+				"5000 m" : "#323232",
+				"2500 m" : "#191919",
+				"70 m" : "#070707"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			style: "slope",
+			body: "ike",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.DRES = L.KSP.celestialBody({
