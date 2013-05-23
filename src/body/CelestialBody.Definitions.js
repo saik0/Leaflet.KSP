@@ -8,21 +8,126 @@ L.KSP.CelestialBody.MOHO = L.KSP.celestialBody({
 	id: "moho",
 	name: "Moho",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-moho.png"
+	radius: 250000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 28,
+	thumbnail: "http://static.kerbalmaps.com/images/body-moho.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "moho",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "moho",
+			style: "color",
+			legend: {
+				"7000 m" : "#cdbea5",
+				"6000 m" : "#a08773",
+				"3000 m" : "#786455",
+				"1500 m" : "#645046",
+				"500 m" : "#4b3c32",
+				"0 m" : "#322823"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "moho",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
 	id: "eve",
 	name: "Eve",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-eve.png"
+	radius: 700000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 28,
+	thumbnail: "http://static.kerbalmaps.com/images/body-eve.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eve",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eve",
+			style: "color",
+			legend: {
+				"6500 m" : "#0f0f1e",
+				"6000 m" : "#1e1728",
+				"3000 m" : "#2d1e37",
+				"1500 m" : "#37283c",
+				"500 m" : "#3c2841",
+				"5 m" : "#4b3c55",
+				"-5 m" : "#8c7d9b",
+				"-500 m" : "#645573"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eve",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.GILLY = L.KSP.celestialBody({
 	id: "gilly",
 	name: "Gilly",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-gilly.png"
+	radius: 13000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 27,
+	thumbnail: "http://static.kerbalmaps.com/images/body-gilly.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "gilly",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "gilly",
+			style: "color",
+			legend: {
+				"6500 m" : "#b99b82",
+				"4500 m" : "#a08273",
+				"2500 m" : "#78695a",
+				"1500 m" : "#554b41"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "gilly",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
@@ -32,6 +137,8 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 	radius: 600000,
 	addedOn: 1366416000000, // Sat 20 Apr 2013 12:00:00 AM UTC
 	lastUpdated: 1366416000000, // Sat 20 Apr 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 34,
 	thumbnail: "http://static.kerbalmaps.com/images/body-kerbin.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -94,8 +201,10 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 	name: "Mun",
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 200000,
-	addedOn: 1368230400000, //Sat 11 May 2013 12:00:00 AM UTC
-	lastUpdated: 1368144000000, //Fri 10 May 2013 12:00:00 AM UTC
+	addedOn: 1368230400000, // Sat 11 May 2013 12:00:00 AM UTC
+	lastUpdated: 1368230400000, // Sat 11 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 28,
 	thumbnail: "http://static.kerbalmaps.com/images/body-mun.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -143,6 +252,8 @@ L.KSP.CelestialBody.MINMUS = L.KSP.celestialBody({
 	radius: 60000,
 	addedOn: 1368230400000, //Sat 11 May 2013 12:00:00 AM UTC
 	lastUpdated: 1368230400000, //Sat 11 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 26,
 	thumbnail: "http://static.kerbalmaps.com/images/body-minmus.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -185,6 +296,8 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 	radius: 320000,
 	addedOn: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
 	lastUpdated: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 28,
 	thumbnail: "http://static.kerbalmaps.com/images/body-duna.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -233,6 +346,8 @@ L.KSP.CelestialBody.IKE = L.KSP.celestialBody({
 	radius: 130000,
 	addedOn: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
 	lastUpdated: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 26,
 	thumbnail: "http://static.kerbalmaps.com/images/body-ike.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -271,7 +386,41 @@ L.KSP.CelestialBody.DRES = L.KSP.celestialBody({
 	id: "dres",
 	name: "Dres",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-dres.png"
+	radius: 138000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 28,
+	thumbnail: "http://static.kerbalmaps.com/images/body-dres.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "dres",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "dres",
+			style: "color",
+			legend: {
+				"6000 m" : "#beb9b4",
+				"3500 m" : "#96918c",
+				"2000 m" : "#504646",
+				"500 m" : "#2d2828",
+				"25 m" : "#191919"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "dres",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.JOOL = L.KSP.celestialBody({
@@ -285,41 +434,265 @@ L.KSP.CelestialBody.LAYTHE = L.KSP.celestialBody({
 	id: "laythe",
 	name: "Laythe",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-laythe.png"
+	radius: 500000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 26,
+	thumbnail: "http://static.kerbalmaps.com/images/body-laythe.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "laythe",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "laythe",
+			style: "color",
+			legend: {
+				"6050 m" : "#cdcd9b",
+				"3000 m" : "#aaaa7d",
+				"1500 m" : "#8c8c69",
+				"500 m" : "#696950",
+				"0.001 m" : "#464637",
+				"-0 m" : "#46505a",
+				"-50 m" : "#1e4173",
+				"-500 m" : "#192d55"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "laythe",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 L.KSP.CelestialBody.VALL = L.KSP.celestialBody({
 	id: "vall",
 	name: "Vall",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-vall.png"
+	radius: 300000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 26,
+	thumbnail: "http://static.kerbalmaps.com/images/body-vall.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "vall",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "vall",
+			style: "color",
+			legend: {
+				"8000 m" : "#e6f0f0",
+				"4000 m" : "#bed7dc",
+				"2000 m" : "#91b9be",
+				"1000 m" : "#87aaaf",
+				"0 m" : "#739196",
+				"-400 m" : "#647d82"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "vall",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {
+		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
+			L.marker([-60.3289, 84.0579], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-60.3289 : 84.0579") //icehenge
+		])
+	}
 });
 
 L.KSP.CelestialBody.TYLO = L.KSP.celestialBody({
 	id: "tylo",
 	name: "Tylo",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-tylo.png"
+	radius: 600000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 26,
+	thumbnail: "http://static.kerbalmaps.com/images/body-tylo.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "tylo",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "tylo",
+			style: "color",
+			legend: {
+				"11300 m" : "#f5f0f0",
+				"10000 m" : "#e6e1dc",
+				"5000 m" : "#b4afaa",
+				"2500 m" : "#878278",
+				"1000 m" : "#645f5a",
+				"250 m" : "#322d2d",
+				"1 m" : "#141414"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "tylo",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {
+		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
+			L.marker([-8.9969, 17.7375], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-8.9969 : 17.7375"), //sagan
+			L.marker([40.2671, 174.0467], {icon: L.KSP.Icon.ANOMALY}).bindPopup("40.2671 : 174.0467") //cave
+		])
+	}
 });
 
 L.KSP.CelestialBody.BOP = L.KSP.celestialBody({
 	id: "bop",
 	name: "Bop",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-bop.png"
+	radius: 65000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 30,
+	thumbnail: "http://static.kerbalmaps.com/images/body-bop.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "bop",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "bop",
+			style: "color",
+			legend: {
+				"22000 m" : "#918c7d",
+				"18000 m" : "#645a55",
+				"12000 m" : "#413732",
+				"6000 m" : "#2d2823",
+				"2000 m" : "#1e1914"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "bop",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {
+		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
+			L.marker([68.211, 118.4473], {icon: L.KSP.Icon.ANOMALY}).bindPopup("68.211 : 118.4473") //deadkracken
+		])
+	}
 });
 
 L.KSP.CelestialBody.POL = L.KSP.celestialBody({
 	id: "pol",
 	name: "Pol",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-pol.png"
+	radius: 44000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 30,
+	thumbnail: "http://static.kerbalmaps.com/images/body-pol.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "pol",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "pol",
+			style: "color",
+			legend: {
+				"5600 m" : "#ebd296",
+				"5000 m" : "#d2b982",
+				"2500 m" : "#91785f",
+				"1000 m" : "#505055",
+				"780 m" : "#4b4b50"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "pol",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 L.KSP.CelestialBody.EELOO = L.KSP.celestialBody({
 	id: "eeloo",
 	name: "Eeloo",
 	crs: L.KSP.CRS.EPSG4326,
-	thumbnail: "http://static.kerbalmaps.com/images/body-eeloo.png"
+	radius: 210000,
+	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
+	lastUpdatedVer: 34,
+	lastModifiedVer: 30,
+	thumbnail: "http://static.kerbalmaps.com/images/body-eeloo.png",
+	baseLayers: {
+		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eeloo",
+			style: "sat"
+		}),
+		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eeloo",
+			style: "color",
+			legend: {
+				"3900 m" : "#c3cdcd",
+				"3500 m" : "#afb9b9",
+				"2000 m" : "#879191",
+				"1000 m" : "#787878",
+				"500 m" : "#4b4637",
+				"-400 m" : "#322d23"
+			}
+		}),
+		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
+				L.KSP.TileLayer.DEFAULT_URL,
+				L.KSP.CRS.EPSG4326, {
+			body: "eeloo",
+			style: "slope",
+			legend: L.KSP.Legend.SLOPE
+		})
+	},
+	overlays: {}
 });
 
 // Objects are unordered so we explicly define the default layer
