@@ -136,28 +136,26 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 600000,
 	addedOn: 1366416000000, // Sat 20 Apr 2013 12:00:00 AM UTC
-	lastUpdated: 1366416000000, // Sat 20 Apr 2013 12:00:00 AM UTC
-	lastUpdatedVer: 34,
-	lastModifiedVer: 34,
+	lastUpdated: 1374969600000, // Sun 28 Jul 2013 12:00:00 AM UTC
+	lastUpdatedVer: 38,
+	lastModifiedVer: 38,
 	thumbnail: "http://static.kerbalmaps.com/images/body-kerbin.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
 				L.KSP.TileLayer.DEFAULT_URL,
 				L.KSP.CRS.EPSG4326, {
 			body: "kerbin",
-			style: "sat",
-			maxZoom: 4
+			style: "sat"
 		}),
 		"Color Relief": L.KSP.tileLayer(L.KSP.TileLayer.TYPE_COLORRELIEF,
 				L.KSP.TileLayer.DEFAULT_URL,
 				L.KSP.CRS.EPSG4326, {
 			body: "kerbin",
 			style: "color",
-			maxZoom: 4,
 			legend: {
-				"4500 m" : "#FFFFFF",
-				"4000 m" : "#E6E1E1",
-				"3000 m" : "#C39B87",
+				"6800 m" : "#FFFFFF",
+				"6000 m" : "#E6E1E1",
+				"4000 m" : "#C39B87",
 				"2000 m" : "#B97855",
 				"1000 m" : "#B99B6E",
 				"600 m" : "#5A825A",
@@ -166,7 +164,6 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 				"0 m" : "#004120",
 				"-500 m" : "#0F4B9B",
 				"-100 m" : "#1E6E9B"
-
 			}
 		}),
 		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
@@ -174,8 +171,7 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 				L.KSP.CRS.EPSG4326, {
 			body: "kerbin",
 			style: "slope",
-			maxZoom: 4
-			// legend: L.KSP.Legend.SLOPE // messed up this layer, the colors dont properly map to angular degrees
+			legend: L.KSP.Legend.SLOPE
 		})
 	},
 	overlays: {
@@ -202,9 +198,9 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 200000,
 	addedOn: 1368230400000, // Sat 11 May 2013 12:00:00 AM UTC
-	lastUpdated: 1368230400000, // Sat 11 May 2013 12:00:00 AM UTC
-	lastUpdatedVer: 34,
-	lastModifiedVer: 28,
+	lastUpdated: 1374969600000, // Sun 28 Jul 2013 12:00:00 AM UTC
+	lastUpdatedVer: 38,
+	lastModifiedVer: 38,
 	thumbnail: "http://static.kerbalmaps.com/images/body-mun.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -219,8 +215,8 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 			body: "mun",
 			style: "color",
 			legend: {
-				"3150 m" : "#EBEBEB",
-				"-180 m" : "#232323"
+				"6700 m" : "#EBEBEB",
+				"-70 m" : "#232323"
 			}
 		}),
 		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
