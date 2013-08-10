@@ -10,9 +10,9 @@ L.KSP.CelestialBody.MOHO = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 250000,
 	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
-	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
-	lastUpdatedVer: 34,
-	lastModifiedVer: 28,
+	lastUpdated: 1375747200000, // Tue 06 Aug 2013 12:00:00 AM UTC
+	lastUpdatedVer: 38,
+	lastModifiedVer: 38,
 	thumbnail: "http://static.kerbalmaps.com/images/body-moho.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -52,9 +52,9 @@ L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 700000,
 	addedOn: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
-	lastUpdated: 1369180800000, // Wed 22 May 2013 12:00:00 AM UTC
-	lastUpdatedVer: 34,
-	lastModifiedVer: 28,
+	lastUpdated: 1375747200000, // Tue 06 Aug 2013 12:00:00 AM UTC
+	lastUpdatedVer: 38,
+	lastModifiedVer: 38,
 	thumbnail: "http://static.kerbalmaps.com/images/body-eve.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -69,6 +69,7 @@ L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
 			body: "eve",
 			style: "color",
 			legend: {
+				"7540 m" : "#000000",
 				"6500 m" : "#0f0f1e",
 				"6000 m" : "#1e1728",
 				"3000 m" : "#2d1e37",
@@ -291,9 +292,9 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326,
 	radius: 320000,
 	addedOn: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
-	lastUpdated: 1368835200000, //Sat 18 May 2013 12:00:00 AM UTC
-	lastUpdatedVer: 34,
-	lastModifiedVer: 28,
+	lastUpdated: 1375747200000, // Tue 06 Aug 2013 12:00:00 AM UTC
+	lastUpdatedVer: 38,
+	lastModifiedVer: 38,
 	thumbnail: "http://static.kerbalmaps.com/images/body-duna.png",
 	baseLayers: {
 		"Satellite":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SATELLITE,
@@ -308,12 +309,12 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 			style: "color",
 			body: "duna",
 			legend: {
-				"4800 m" : "#C3A082",
-				"4000 m" : "#966446",
-				"3000 m" : "#733219",
-				"2000 m" : "#501E14",
-				"1000 m" : "#3C140F",
-				"0 m" : "#280F0A"
+				"8265 m" : "#C3A082",
+				"6640 m" : "#966446",
+				"5010 m" : "#733219",
+				"3380 m" : "#501E14",
+				"1750 m" : "#3C140F",
+				"125 m" : "#280F0A"
 			}
 		}),
 		"Slope":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_SLOPE,
