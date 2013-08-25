@@ -41,7 +41,7 @@ L.KSP.CelestialBody = L.Class.extend({
 		if (baseLayer) {
 			for (layer in this.baseLayers) {
 				if (this.baseLayers.hasOwnProperty(layer) &&
-						this.baseLayers[layer]._type === map._baseLayerType) {
+						this.baseLayers[layer]._type === map.options.baseLayerType) {
 					baseLayer = this.baseLayers[layer];
 					break;
 				}
@@ -52,7 +52,7 @@ L.KSP.CelestialBody = L.Class.extend({
 
 		for (layer in this.overlays) {
 			if (this.overlays.hasOwnProperty(layer) &&
-					map._overlayTypes.indexOf(this.overlays[layer]._type) >= 0) {
+					map.options.overlayTypes.indexOf(this.overlays[layer]._type) >= 0) {
 				map.addLayer(this.overlays[layer]);
 				map.fire("layeradd", {layer: this.overlays[layer]});
 			}
@@ -85,4 +85,5 @@ L.KSP.CelestialBody.DUMMY = L.KSP.celestialBody({
 	crs: L.KSP.CRS.EPSG4326
 });
 
+L.KSP.CelestialBody.DEFAULT = L.KSP.CelestialBody.DUMMY;
 L.KSP.CelestialBody.ALL_PLANETARY = [L.KSP.CelestialBody.DUMMY];

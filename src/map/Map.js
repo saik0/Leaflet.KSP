@@ -5,13 +5,13 @@
 L.KSP.Map = L.Map.extend({
 	options: {
 		crs: L.KSP.CRS.EPSG4326,
-		continuousWorld: true
+		continuousWorld: true,
+		layers: [L.KSP.CelestialBody.DEFAULT],
+		baseLayerType: 0,
+		overlayTypes: []
 	},
 
 	initialize: function (id, options) {
-		this._baseLayerType = -1;
-		this._overlayTypes = [];
-
 		L.Util.setOptions(this, options);
 
 		this.startTrackingLayerState();
@@ -47,16 +47,16 @@ L.KSP.Map = L.Map.extend({
 	_onLayerStateChange: function (e) {
 		if (e.type === "layeradd") {
 			if (e.layer instanceof L.KSP.TileLayer) {
-				this._baseLayerType = e.layer._type;
+				this.options.baseLayerType = e.layer._type;
 			} else if (e.layer instanceof L.KSP.LayerGroup) {
-				if (this._overlayTypes.indexOf(e.layer._type) < 0) {
-					this._overlayTypes.push(e.layer._type);
+				if (this.options.overlayTypes.indexOf(e.layer._type) < 0) {
+					this.options.overlayTypes.push(e.layer._type);
 				}
 			}
 		} else { // layerremoved
 			if (e.layer instanceof L.KSP.LayerGroup) {
 				var type = e.layer._type,
-					types = this._overlayTypes,
+					types = this.options.overlayTypes,
 					i,
 					v;
 

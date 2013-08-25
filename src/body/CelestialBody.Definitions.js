@@ -734,7 +734,6 @@ L.KSP.CelestialBody.ALL_PLANETARY = [
 ];
 
 // Sets the default body to Kerbin
-L.KSP.Map.addInitHook(function () {
-	this.options.layers = [L.KSP.CelestialBody.KERBIN];
-});
+L.KSP.CelestialBody.DEFAULT = L.KSP.CelestialBody.KERBIN;
+L.KSP.Map.prototype.options.layers = [L.KSP.CelestialBody.DEFAULT];
 
