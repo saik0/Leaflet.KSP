@@ -6,7 +6,8 @@
 L.KSP.LayerGroup = L.LayerGroup.extend({
 	statics: {
 		TYPE_SPACECENTER: 0,
-		TYPE_ANOMALY: 1
+		TYPE_ANOMALY: 1,
+		TYPE_POI: 3
 	},
 
 	initialize: function (type, layers) {
