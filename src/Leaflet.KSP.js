@@ -9,9 +9,10 @@ L.KSP.Version = {
 		"0.2",   // 2
 		"0.3",   // 3
 		"0.3.1", // 4
-		"0.4"   // 5
+		"0.4",   // 5
+		"0.5"    // 6
 	],
-	current : 5
+	current : 6
 };
 
 // KSP versioning
