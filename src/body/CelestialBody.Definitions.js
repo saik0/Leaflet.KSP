@@ -43,7 +43,12 @@ L.KSP.CelestialBody.MOHO = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([54.6790, 153.4900], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6817.3765 m<br>54.6790 : 153.4900"),
+			L.marker([-19.6545, -166.2341], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>28.5585 m<br>-19.6545 : -166.2341")
+		])
+	}
 });
 
 L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
@@ -88,7 +93,12 @@ L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-25.0159, -158.4558], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7526.0112 m<br>-25.0159 : -158.4558"),
+			L.marker([-44.7473, -107.8528], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-1876.8985 m<br>-44.7473 : -107.8528")
+		])
+	}
 });
 
 L.KSP.CelestialBody.GILLY = L.KSP.celestialBody({
@@ -128,7 +138,12 @@ L.KSP.CelestialBody.GILLY = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-29.2566, -123.8708], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6400.6353 m<br>-29.2566 : -123.8708"),
+			L.marker([56.7883, -7.2400], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>1493.2832 m<br>56.7883 : -7.2400")
+		])
+	}
 });
 
 L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
@@ -189,6 +204,10 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 			L.marker([-28.8083, -13.4401], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-28.8083 : -13.4401"),
 			L.marker([-6.5057, -141.6856], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-6.5057 : -141.6856"),
 			L.marker([81.9551, -128.518], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-81.9551 : -128.518")
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([61.5784, 46.3733], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6761.0483 m<br>61.5784 : 46.3733"),
+			L.marker([-28.9050, -83.1116], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-1390.9353 m<br>-28.9050 : -83.1116")
 		])
 	}
 });
@@ -238,6 +257,10 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 			L.marker([-12.4431, -140.822], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-12.4431 : -140.8220"), // rockarch
 			L.marker([0.7027, 22.747], {icon: L.KSP.Icon.ANOMALY}).bindPopup("0.7027 : 22.7470"), // armstrongmemorial
 			L.marker([-70.9556, -68.1378], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-70.9556,-68.1378") // ufo
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-82.5183, -152.3254], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7061.1416 m<br>-82.5183 : -152.3254"),
+			L.marker([35.3210, -76.6296], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-247.9042 m<br>35.3210 : -76.6296")
 		])
 	}
 });
@@ -282,6 +305,9 @@ L.KSP.CelestialBody.MINMUS = L.KSP.celestialBody({
 	overlays: {
 		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
 			L.marker([23.7768, 60.0462], {icon: L.KSP.Icon.ANOMALY}).bindPopup("23.7768 : 60.0462") //monolith
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-62.9297, 74.7290], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5724.6001 m<br>-62.9297 : 74.7290")
 		])
 	}
 });
@@ -332,6 +358,10 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 			L.marker([-66.1344, -160.7432], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-66.1344 : -160.7432") //pyramid sstv
 			// though it's defined in game data there does not appear to be anything here
 			// L.marker([-0.0005, -31.8825], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-0.0005 : -31.8825") //pyramid
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([20.8850, -106.7981], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>8264.3242 m<br>20.8850 : -106.7981"),
+			L.marker([-5.9436, -50.5481], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>124.5119 m<br>-5.9436 : -50.5481")
 		])
 	}
 });
@@ -376,7 +406,12 @@ L.KSP.CelestialBody.IKE = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([25.2795, 178.2971], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>12735.1406 m<br>25.2795 : 178.2971"),
+			L.marker([-14.4250, 25.4553], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>73.1864 m<br>-14.4250 : 25.4553")
+		])
+	}
 });
 
 L.KSP.CelestialBody.DRES = L.KSP.celestialBody({
@@ -417,7 +452,12 @@ L.KSP.CelestialBody.DRES = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-85.0012, 42.6379], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5669.7266 m<br>-85.0012 : 42.6379"),
+			L.marker([19.01733, -57.1399], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>25.4619 m<br>19.01733 : -57.1399")
+		])
+	}
 });
 
 L.KSP.CelestialBody.JOOL = L.KSP.celestialBody({
@@ -468,7 +508,12 @@ L.KSP.CelestialBody.LAYTHE = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-17.5891, 172.5842], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6044.7422 m<br>-17.5891 : 172.5842"),
+			L.marker([29.4543, 7.3499], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-2799.8879 m<br>29.4543 : 7.3499")
+		])
+	}
 });
 
 L.KSP.CelestialBody.VALL = L.KSP.celestialBody({
@@ -513,6 +558,10 @@ L.KSP.CelestialBody.VALL = L.KSP.celestialBody({
 	overlays: {
 		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
 			L.marker([-60.3289, 84.0579], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-60.3289 : 84.0579") //icehenge
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-57.4915, -144.4592], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7989.1372 m<br>-57.4915 : -144.4592"),
+			L.marker([11.6345, 145.4919], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-394.3332 m<br>11.6345 : 145.4919")
 		])
 	}
 });
@@ -561,6 +610,9 @@ L.KSP.CelestialBody.TYLO = L.KSP.celestialBody({
 		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
 			L.marker([-8.9969, 17.7375], {icon: L.KSP.Icon.ANOMALY}).bindPopup("-8.9969 : 17.7375"), //sagan
 			L.marker([40.2671, 174.0467], {icon: L.KSP.Icon.ANOMALY}).bindPopup("40.2671 : 174.0467") //cave
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-51.7786, 20.5774], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>11282.5488 m<br>-51.7786 : 20.5774")
 		])
 	}
 });
@@ -606,6 +658,10 @@ L.KSP.CelestialBody.BOP = L.KSP.celestialBody({
 	overlays: {
 		"Anomalies": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_ANOMALY, [
 			L.marker([68.211, 118.4473], {icon: L.KSP.Icon.ANOMALY}).bindPopup("68.211 : 118.4473") //deadkracken
+		]),
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([23.8733, -64.5667], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>21754.9961 m<br>23.8733 : -64.5667"),
+			L.marker([37.5842, -139.2737], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>2003.2421 m<br>37.5842 : -139.2737")
 		])
 	}
 });
@@ -648,7 +704,12 @@ L.KSP.CelestialBody.POL = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([-62.8308, 164.5862], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5590.2134 m<br>-62.8308 : 164.5862"),
+			L.marker([-25.1257, 173.7708], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>782.5003 m<br>-25.1257 : 173.7708")
+		])
+	}
 });
 L.KSP.CelestialBody.EELOO = L.KSP.celestialBody({
 	id: "eeloo",
@@ -689,7 +750,12 @@ L.KSP.CelestialBody.EELOO = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		})
 	},
-	overlays: {}
+	overlays: {
+		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
+			L.marker([24.3347, 27.9602], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>3873.4644 m<br>24.3347 : 27.9602"),
+			L.marker([51.7786, -32.2888], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-386.8858 m<br>51.7786 : -32.2888")
+		])
+	}
 });
 
 // Objects are unordered so we explicly define the default layer
