@@ -64,10 +64,10 @@
 }
 
 .leaflet-control-celestialbodies-expanded .leaflet-control-celestialbodies-list {
-	display: block;	
+	display: block;
 }
 
-.leaflet-control-celestialbodies-list, 
+.leaflet-control-celestialbodies-list,
 .leaflet-control-celestialbodies-list ul {
 	list-style: none;
 	margin: 0;
