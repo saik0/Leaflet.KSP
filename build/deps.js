@@ -67,7 +67,12 @@ var deps = {
 		src: [ 'control/Control.Layers.js' ],
 		desc: 'A layer contol that updates when the CelestialBody is changed.'
 	},
-	
+
+	ControlInfo: {
+		src: [ 'control/Control.Info.js' ],
+		desc: 'Display some info about the map.'
+	},
+
 	CelestialBodyDefinitions: {
 		src: [ 'body/CelestialBody.Definitions.js' ],
 		desc: 'Definitions of all the celestial bodies in Kerbal Space program, tile and marker layers to display them, and a model of their relationships.',
