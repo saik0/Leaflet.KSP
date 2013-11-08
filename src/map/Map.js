@@ -78,6 +78,16 @@ L.KSP.Map = L.Map.extend({
 	stopTrackingLayerState: function () {
 		this.off("layeradd", this._onLayerStateChange)
 			.off("layerremove", this._onLayerStateChange);
+	},
+
+	// a shim for 0.6 plugins
+	eachLayer: function (method, context) {
+		for (var i in this._layers) {
+			if (this._layers.hasOwnProperty(i)) {
+				method.call(context, this._layers[i]);
+			}
+		}
+		return this;
 	}
 });
 
