@@ -4,6 +4,7 @@ var deps = {
 			'Leaflet.KSP.js',
 			'geo/crs/CRS.js',
 			'body/CelestialBody.js',
+			'control/Control.js',
 			'map/Map.js'
 		],
 		desc: 'The core of the plugin, including predifined default CRS, and CelestialBody.'
@@ -27,11 +28,6 @@ var deps = {
 	Legend: {
 		src: [ 'model/Legend.js' ],
 		desc: 'A very simple data model for the legend control, and predifined legends.'
-	},
-
-	Control: {
-		src: [ 'control/Control.js' ],
-		desc: 'A contol to change which CelestialBody is displayed on a map.'
 	},
 
 	ControlLegend: {
