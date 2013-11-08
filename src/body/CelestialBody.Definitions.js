@@ -188,6 +188,23 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 			body: "kerbin",
 			style: "slope",
 			legend: L.KSP.Legend.SLOPE
+		}),
+		"Biome":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_BIOME,
+				"http://test.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
+				L.KSP.CRS.EPSG4326, {
+			body: "kerbin",
+			style: "biome",
+			legend: {
+				"Water" : "#00245E",
+				"Shores" : "#B5D3D1",
+				"Grasslands" : "#4BAC00",
+				"Highlands" : "#1C7800",
+				"Mountains" : "#824600",
+				"Deserts" : "#CCB483",
+				"Badlands" : "#FCD037",
+				"Tundra" : "#89FA91",
+				"Ice Caps" : "#FEFEFE"
+			}
 		})
 	},
 	overlays: {
@@ -245,6 +262,29 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 			body: "mun",
 			style: "slope",
 			legend: L.KSP.Legend.SLOPE
+		}),
+		"Biome":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_BIOME,
+				"http://test.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
+				L.KSP.CRS.EPSG4326, {
+			body: "mun",
+			style: "biome",
+			legend: {
+				"Midlands" : "#737373",
+				"Midland Craters" : "#4C3B4A",
+				"Highlands" : "#ACACAC",
+				"Highland Craters" : "#9E7FA3",
+				"Poles" : "#65D4D9",
+				"Polar Lowlands" : "#289C93",
+				"Polar Crater" : "#2E2E63",
+				"Northern Basin" : "#3A5B3B",
+				"East Crater" : "#CFCF87",
+				"Northwest Crater" : "#580707",
+				"Southwest Crater" : "#B12D78",
+				"Farside Crater" : "#63A53C",
+				"East Farside Crater" : "#AA4848",
+				"Twin Craters" : "#B3761A",
+				"Canyons" : "#534600"
+			}
 		})
 	},
 	overlays: {

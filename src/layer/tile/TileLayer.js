@@ -11,6 +11,7 @@ L.KSP.TileLayer = L.Proj.TileLayer.TMS.extend({
 		TYPE_SATELLITE: 0,
 		TYPE_COLORRELIEF: 1,
 		TYPE_SLOPE: 2,
+		TYPE_BIOME: 3,
 		DEFAULT_URL: "http://tiles.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png"
 	},
 
