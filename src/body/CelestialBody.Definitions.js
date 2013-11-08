@@ -48,6 +48,18 @@ L.KSP.CelestialBody.MOHO = L.KSP.celestialBody({
 			L.marker([54.6790, 153.4900], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6817.3765 m<br>54.6790 : 153.4900"),
 			L.marker([-19.6545, -166.2341], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>28.5585 m<br>-19.6545 : -166.2341")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "moho",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "moho",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -98,6 +110,18 @@ L.KSP.CelestialBody.EVE = L.KSP.celestialBody({
 			L.marker([-25.0159, -158.4558], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7526.0112 m<br>-25.0159 : -158.4558"),
 			L.marker([-44.7473, -107.8528], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-1876.8985 m<br>-44.7473 : -107.8528")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "eve",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "eve",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -143,6 +167,18 @@ L.KSP.CelestialBody.GILLY = L.KSP.celestialBody({
 			L.marker([-29.2566, -123.8708], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6400.6353 m<br>-29.2566 : -123.8708"),
 			L.marker([56.7883, -7.2400], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>1493.2832 m<br>56.7883 : -7.2400")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "gilly",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "gilly",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -226,6 +262,22 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 			L.marker([61.5784, 46.3733], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6761.0483 m<br>61.5784 : 46.3733"),
 			L.marker([-28.9050, -83.1116], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-1390.9353 m<br>-28.9050 : -83.1116")
 		])
+	},
+	grids: {
+		"Biome": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_BIOME, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "kerbin",
+			style: "biome"
+		}),
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "kerbin",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "kerbin",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -302,6 +354,22 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 			L.marker([-82.5183, -152.3254], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7061.1416 m<br>-82.5183 : -152.3254"),
 			L.marker([35.3210, -76.6296], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-247.9042 m<br>35.3210 : -76.6296")
 		])
+	},
+	grids: {
+		"Biome": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_BIOME, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "mun",
+			style: "biome"
+		}),
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "mun",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "mun",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -349,6 +417,18 @@ L.KSP.CelestialBody.MINMUS = L.KSP.celestialBody({
 		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
 			L.marker([-62.9297, 74.7290], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5724.6001 m<br>-62.9297 : 74.7290")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "minmus",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "minmus",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -403,6 +483,18 @@ L.KSP.CelestialBody.DUNA = L.KSP.celestialBody({
 			L.marker([20.8850, -106.7981], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>8264.3242 m<br>20.8850 : -106.7981"),
 			L.marker([-5.9436, -50.5481], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>124.5119 m<br>-5.9436 : -50.5481")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "duna",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "duna",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -451,6 +543,18 @@ L.KSP.CelestialBody.IKE = L.KSP.celestialBody({
 			L.marker([25.2795, 178.2971], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>12735.1406 m<br>25.2795 : 178.2971"),
 			L.marker([-14.4250, 25.4553], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>73.1864 m<br>-14.4250 : 25.4553")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "ike",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "ike",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -497,6 +601,18 @@ L.KSP.CelestialBody.DRES = L.KSP.celestialBody({
 			L.marker([-85.0012, 42.6379], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5669.7266 m<br>-85.0012 : 42.6379"),
 			L.marker([19.01733, -57.1399], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>25.4619 m<br>19.01733 : -57.1399")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "dres",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "dres",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -553,6 +669,18 @@ L.KSP.CelestialBody.LAYTHE = L.KSP.celestialBody({
 			L.marker([-17.5891, 172.5842], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>6044.7422 m<br>-17.5891 : 172.5842"),
 			L.marker([29.4543, 7.3499], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-2799.8879 m<br>29.4543 : 7.3499")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "laythe",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "laythe",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -603,6 +731,18 @@ L.KSP.CelestialBody.VALL = L.KSP.celestialBody({
 			L.marker([-57.4915, -144.4592], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>7989.1372 m<br>-57.4915 : -144.4592"),
 			L.marker([11.6345, 145.4919], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-394.3332 m<br>11.6345 : 145.4919")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "vall",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "vall",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -654,6 +794,18 @@ L.KSP.CelestialBody.TYLO = L.KSP.celestialBody({
 		"Points of Interest": L.KSP.layerGroup(L.KSP.LayerGroup.TYPE_POI, [
 			L.marker([-51.7786, 20.5774], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>11282.5488 m<br>-51.7786 : 20.5774")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "tylo",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "tylo",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -703,6 +855,18 @@ L.KSP.CelestialBody.BOP = L.KSP.celestialBody({
 			L.marker([23.8733, -64.5667], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>21754.9961 m<br>23.8733 : -64.5667"),
 			L.marker([37.5842, -139.2737], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>2003.2421 m<br>37.5842 : -139.2737")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "bop",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "bop",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -749,6 +913,18 @@ L.KSP.CelestialBody.POL = L.KSP.celestialBody({
 			L.marker([-62.8308, 164.5862], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>5590.2134 m<br>-62.8308 : 164.5862"),
 			L.marker([-25.1257, 173.7708], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>782.5003 m<br>-25.1257 : 173.7708")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "pol",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "pol",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 L.KSP.CelestialBody.EELOO = L.KSP.celestialBody({
@@ -795,6 +971,18 @@ L.KSP.CelestialBody.EELOO = L.KSP.celestialBody({
 			L.marker([24.3347, 27.9602], {icon: L.KSP.Icon.HIGH}).bindPopup("<strong>Highest Elevation</strong><br>3873.4644 m<br>24.3347 : 27.9602"),
 			L.marker([51.7786, -32.2888], {icon: L.KSP.Icon.LOW}).bindPopup("<strong>Lowest Elevation</strong><br>-386.8858 m<br>51.7786 : -32.2888")
 		])
+	},
+	grids: {
+		"Elevation": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_ELEVATION, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "eeloo",
+			style: "elevation",
+			resolution: 4
+		}),
+		"Slope": L.KSP.utfGrid(L.KSP.UtfGrid.TYPE_SLOPE, L.KSP.UtfGrid.DEFAULT_URL, {
+			body: "eeloo",
+			style: "slope",
+			resolution: 4
+		})
 	}
 });
 
@@ -842,4 +1030,3 @@ L.KSP.CelestialBody.ALL_PLANETARY = [
 // Sets the default body to Kerbin
 L.KSP.CelestialBody.DEFAULT = L.KSP.CelestialBody.KERBIN;
 L.KSP.Map.prototype.options.layers = [L.KSP.CelestialBody.DEFAULT];
-

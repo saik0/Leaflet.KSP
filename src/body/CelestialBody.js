@@ -34,6 +34,11 @@ L.KSP.CelestialBody = L.Class.extend({
 					map.removeLayer(oldBody.overlays[layer]);
 				}
 			}
+			for (layer in oldBody.grids) {
+				if (oldBody.grids.hasOwnProperty(layer)) {
+					map.removeLayer(oldBody.grids[layer]);
+				}
+			}
 		}
 
 		// restore base layer type
@@ -58,6 +63,13 @@ L.KSP.CelestialBody = L.Class.extend({
 			}
 		}
 		map.fire("bodychangeend", {body: this, oldBody: oldBody});
+
+		for (layer in this.grids) {
+			if (this.grids.hasOwnProperty(layer)) {
+				map.addLayer(this.grids[layer]);
+				map.fire("layeradd", {layer: this.grids[layer]});
+			}
+		}
 	},
 
 	onAdd: function (map) {
