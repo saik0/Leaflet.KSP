@@ -1,6 +1,6 @@
 exports.config = {
 	// Globals
-	"predef": ["L", "Proj4js"],
+	"predef": ["L", "Proj4js", "ActiveXObject"],
 
 	// Environment options
 	"browser": true,

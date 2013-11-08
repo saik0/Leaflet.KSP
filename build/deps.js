@@ -30,6 +30,17 @@ var deps = {
 		desc: 'A very simple data model for the legend control, and predifined legends.'
 	},
 
+	Json: {
+		src: [ 'util/Json.js' ],
+		desc: 'A javascript JSON parser.'
+	},
+
+	Ajax: {
+		src: [ 'util/Ajax.js' ],
+		desc: 'Fetch and parse files using asynchonous javascript and xml.',
+		deps: ['JSON']
+	},
+
 	ControlLegend: {
 		src: [ 'control/Control.Legend.js' ],
 		desc: 'Displays a simple legend on the map',
