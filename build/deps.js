@@ -41,6 +41,12 @@ var deps = {
 		deps: ['JSON']
 	},
 
+	UtfGrid: {
+		src: [ 'layer/UtfGrid.js' ],
+		desc: 'Holds UTF-8 encoded data.',
+		deps: ['AJAX']
+	},
+
 	ControlLegend: {
 		src: [ 'control/Control.Legend.js' ],
 		desc: 'Displays a simple legend on the map',
