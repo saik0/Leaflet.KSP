@@ -226,7 +226,7 @@ L.KSP.CelestialBody.KERBIN = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		}),
 		"Biome":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_BIOME,
-				"http://test.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
+				"http://static.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
 				L.KSP.CRS.EPSG4326, {
 			body: "kerbin",
 			style: "biome",
@@ -316,7 +316,7 @@ L.KSP.CelestialBody.MUN = L.KSP.celestialBody({
 			legend: L.KSP.Legend.SLOPE
 		}),
 		"Biome":  L.KSP.tileLayer(L.KSP.TileLayer.TYPE_BIOME,
-				"http://test.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
+				"http://static.kerbalmaps.com/{body}/{style}/{z}/{x}/{y}.png",
 				L.KSP.CRS.EPSG4326, {
 			body: "mun",
 			style: "biome",
